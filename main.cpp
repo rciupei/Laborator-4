@@ -4,18 +4,26 @@ using namespace std;
 
 int main()
 {
-       long sum=0;
+
        int a[20];
-       int nr;
-   cout <<"Cate numere adunati? ";
-   cin>>nr;
+       int max,i,nr,n;
 
-   for (int  i = 0; i <nr; i++ )
-   {
+   max = a[0];
+   cout << "Numarul de elemente din sirul a (maximum 20) ";
+    cin >> nr;
+    for (i = 0; i < nr; i++){
+        cout << "a[" << i << "] = ";
         cin >> a[i];
-    sum = sum + a[i];
 
-   }
-   cout << "Suma elementelor sirului a este : " << sum << endl;
+    }
+     for (i = 0; i < nr; i++){
+    if (max < a[i])
+        max=a[i];}
+
+  /* for (i = 1; i <5; i++ )
+   {
+
+   }*/
+   cout << "Cel mai mare numar este:" << max << endl;
     return 0;
 }
