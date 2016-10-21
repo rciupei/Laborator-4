@@ -6,9 +6,9 @@ int main()
 {
 
        int a[20];
-       int max,i,nr,n;
+       int max,i,j,nr,n,aux;
 
-   max = a[0];
+
    cout << "Numarul de elemente din sirul a (maximum 20) ";
     cin >> nr;
     for (i = 0; i < nr; i++){
@@ -16,14 +16,17 @@ int main()
         cin >> a[i];
 
     }
-     for (i = 0; i < nr; i++){
-    if (max < a[i])
-        max=a[i];}
+     for (i=0, j=nr-1;i<j;i++,j--){
+     aux=a[i];
+     a[i]=a[j];
+     a[j]=aux;
+     ;
+     }
+     for(i=0; i<nr; i++){
+     cout << a[i]<<" ";
+     }
 
-  /* for (i = 1; i <5; i++ )
-   {
 
-   }*/
-   cout << "Cel mai mare numar este:" << max << endl;
+//   cout << "Cel mai mare numar este:" << max << endl;
     return 0;
 }
